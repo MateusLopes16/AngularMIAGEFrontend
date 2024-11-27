@@ -1,0 +1,97 @@
+/* Styles for the sidenav container */
+mat-sidenav-container {
+    /* height: 100%; */
+    /* set the height to the rest of the page */
+    height: calc(100vh - var(--toolbar-height));
+    background-color: #f4f4f9;
+  }
+  
+  /* Styles for the sidenav */
+  mat-sidenav {
+    width: 250px;
+    background-color: #243f79;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+  
+  /* Styles for the toolbar */
+  mat-toolbar {
+    height: var(--toolbar-height);
+    background-color: #243f79;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the toolbar row */
+  mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Styles for the toolbar buttons */
+  mat-toolbar button {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styles for the toolbar icons */
+  mat-toolbar button mat-icon {
+    margin-right: 8px;
+  }
+  
+  /* Styles for the sidenav links */
+  mat-nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the sidenav icons */
+  mat-nav-list a mat-icon {
+    margin-right: 8px;
+    color: white;
+  }
+
+  mat-nav-list a span {
+    color: white;
+  }
+  
+  /* Styles for the active sidenav link */
+  mat-nav-list a.active {
+    background-color: #1a2f5f;
+  }
+  
+  /* Styles for the sidenav list items */
+  mat-list-item {
+    padding: 0;
+  }
+  
+  /* Styles for the sidenav list */
+  mat-list {
+    width: 100%;
+  }
+  
+  /* Styles for the sidenav content */
+  mat-sidenav-content {
+  }
+  
+  /* Styles for the container */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Spacer to push login to the bottom */
+  .spacer {
+    flex-grow: 1;
+  }

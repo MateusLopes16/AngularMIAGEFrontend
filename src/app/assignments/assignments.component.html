@@ -1,0 +1,25 @@
+<div *ngIf="isLogged">
+  <p>Titre = {{ titre }}</p>
+  <a routerLink="/add"><button class="ajouteBtn" mat-flat-button color="accent"> Ajouter Assignment</button></a>
+  <button mat-flat-button color="primary" (click)="peuplerBD()">peuplerDB</button>
+  <mat-list>
+    <div *ngFor="let assignment of assignments" class="assignment">
+      <mat-list-item (click)="assignmentClique(assignment)" routerLink="/assignment/{{assignment.id}}">
+        <div class="assignment-content">
+          <p class="date">{{assignment.dateDeRendu | date: 'dd/MM/yyyy'}}</p>
+          <p class="name">{{assignment.nom}}</p>
+          <p class="status" appRendu *ngIf="assignment.rendu; else nonRendu"> Devoir rendu </p>
+          <ng-template #nonRendu>
+            <p class="status nonRendu">Le devoir n'a pas été rendu.</p>
+          </ng-template>
+        </div>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </div>
+  </mat-list>
+  <mat-paginator [length]="totalDocs" [pageSize]="limit" [pageSizeOptions]="[5, 10, 20]" (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+<div *ngIf="!isLogged">
+  <p>Vous devez vous connecter pour voir les assignments.</p>
+</div>

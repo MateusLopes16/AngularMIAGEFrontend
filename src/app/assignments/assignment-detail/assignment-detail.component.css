@@ -1,0 +1,40 @@
+ 
+  mat-card {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content; 
+}
+
+mat-card-title {
+  font-size: 24px;
+  color: #243f79;
+}
+
+mat-card-subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+mat-checkbox {
+  margin-top: 20px;
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+mat-card-actions button {
+  margin: 0;
+}

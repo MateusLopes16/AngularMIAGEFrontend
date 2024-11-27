@@ -1,0 +1,23 @@
+<div class="login-container" *ngIf="!isLoggedIn">
+  <h2>{{ isCreatingAccount ? 'Create Account' : 'Login' }}</h2>
+  <form (ngSubmit)="isCreatingAccount ? onCreateAccount() : onLogin()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit">{{ isCreatingAccount ? 'Create Account' : 'Login' }}</button>
+  </form>
+  <button (click)="toggleForm()">
+    {{ isCreatingAccount ? 'Already have an account? Login' : 'Create an account' }}
+  </button>
+</div>
+<div class="user-info" *ngIf="isLoggedIn">
+  <h2>Welcome, {{ getUsername() }}</h2>
+  <p>Username: {{ getUsername() }}</p>
+  <p>Admin: {{ isAdmin() ? 'Yes' : 'No' }}</p>
+  <button (click)="onLogout()">Logout</button>
+</div>

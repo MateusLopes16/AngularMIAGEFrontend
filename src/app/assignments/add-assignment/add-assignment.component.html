@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Ajouter un nouvel assignment</h1>
+    <form ngForm class="form" #assignmentForm="ngForm" (ngSubmit)="onSubmit(); assignmentForm.reset()">
+      <mat-form-field>
+        <input matInput placeholder="Nom du Devoir" [(ngModel)]="nomDevoir" name="nom" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Choisir une date</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Date de rendu" [(ngModel)]="dateDeRendu" name="dateDeRendu" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="actions">
+        <button mat-raised-button color="primary" [disabled]="!assignmentForm.form.valid">Ajouter</button>
+        <button mat-raised-button color="warn" type="button" (click)="deleteAssignment()">Supprimer</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,26 @@
+/* Global Styles */
+:root {
+    --toolbar-height: 80px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

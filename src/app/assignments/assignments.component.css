@@ -1,0 +1,87 @@
+/* Styles for the add button */
+.ajouteBtn {
+   align-self: flex-end;
+   margin-bottom: 20px;
+ }
+ 
+ /* Styles for each assignment item */
+ .assignment {
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s;
+ }
+ 
+ .assignment:hover {
+   transform: translateY(-5px);
+ }
+ 
+ /* Styles for the assignment content */
+ .assignment-content {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+ 
+ /* Styles for the assignment date */
+ .assignment .date {
+   font-size: 14px;
+   color: #666;
+   margin-right: 20px;
+ }
+ 
+ /* Styles for the assignment name */
+ .assignment .name {
+   font-size: 18px;
+   font-weight: bold;
+   flex-grow: 1;
+ }
+ 
+ /* Styles for the assignment status */
+ .assignment .status {
+   font-size: 16px;
+   margin-left: 20px;
+ }
+ 
+ /* Styles for the assignment list item */
+ .assignment mat-list-item {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 0;
+ }
+ 
+ /* Styles for the assignment divider */
+ .assignment mat-divider {
+   margin-top: 10px;
+ }
+ 
+ /* Styles for non-submitted assignments */
+ .nonRendu {
+   color: red;
+   font-weight: bold;
+ }
+ 
+ /* Styles for submitted assignments */
+ .rendu {
+   color: green;
+ }
+ 
+ /* Styles for the form and container */
+ .form, .container {
+   display: flex;
+   flex-direction: column;
+   margin: 5px;
+ }
+ 
+ /* Ensure the page is not scrollable when there is no content */
+ body {
+   overflow: hidden;
+ }
