@@ -14,7 +14,7 @@ export class AssignmentsService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  backendURL = 'https://angularmiagebackend.onrender.com';
+  backendURL = 'https://angularmiagebackend.onrender.com/api/assignments';
   constructor(private loggingService: LoggingService, private http: HttpClient) { }
 
   private handleError<T>(operation: any, result?: T) {
