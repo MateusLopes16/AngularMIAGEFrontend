@@ -65,6 +65,7 @@ export class AssignmentsService {
 
     ASSIGNMENTS.forEach(a => {
       const nouvelAssignment = new Assignment();
+      nouvelAssignment.id = a.id;
       nouvelAssignment.nom = a.nom;
       nouvelAssignment.dateDeRendu = new Date(a.dateDeRendu);
       nouvelAssignment.rendu = a.rendu;
