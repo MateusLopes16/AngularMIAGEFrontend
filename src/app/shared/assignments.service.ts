@@ -14,7 +14,7 @@ export class AssignmentsService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  backendURL = 'https://angularmiagebackend.onrender.com';
+  backendURL = 'https://angularmiagebackend.onrender.com/api/assignments';
   constructor(private loggingService: LoggingService, private http: HttpClient) { }
 
   private handleError<T>(operation: any, result?: T) {
@@ -65,6 +65,7 @@ export class AssignmentsService {
 
     ASSIGNMENTS.forEach(a => {
       const nouvelAssignment = new Assignment();
+      nouvelAssignment.id = a.id;
       nouvelAssignment.nom = a.nom;
       nouvelAssignment.dateDeRendu = new Date(a.dateDeRendu);
       nouvelAssignment.rendu = a.rendu;

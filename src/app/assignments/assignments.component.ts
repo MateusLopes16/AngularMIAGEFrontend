@@ -85,6 +85,7 @@ export class AssignmentsComponent implements OnInit {
     this.assignmentService.peupleDBavecForkJoin().subscribe(() => {
       console.log("Peuplement de la BD réussi !");
       this.getAssignments();
+      window.location.reload();
     });
   }
 }
